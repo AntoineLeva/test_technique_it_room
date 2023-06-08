@@ -3,3 +3,13 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+job_index:
+    path: /jobs
+    controller: App\Controller\JobController::index
+    methods: GET
+
+job_create:
+    path: /jobs/create
+    controller: App\Controller\JobController::createJob
+    methods: GET

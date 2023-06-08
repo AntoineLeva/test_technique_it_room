@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Liste des offres d'emploi</h1>
+
+    <table>
+        <tr>
+            <th>Titre</th>
+            <th>Description</th>
+            <th>Date de création</th>
+        </tr>
+        {% for job in jobs %}
+            <tr>
+                <td>{{ job.title }}</td>
+                <td>{{ job.description }}</td>
+                <td>{{ job.createdAt|date('d/m/Y H:i:s') }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
